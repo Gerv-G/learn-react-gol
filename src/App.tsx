@@ -1,62 +1,12 @@
 import React from 'react';
 import './App.css';
-
-function Cell() {
-  return (
-    <button className="cell">
-      {/* TODO */}
-    </button>
-  )
-}
-
-//TODO: programatically generate board based on the specified grid size
-function Board() {
-  return (
-    <div>
-      <div className="board-row">
-        {Cell()}
-        {Cell()}
-        {Cell()}
-        {Cell()}
-        {Cell()}
-      </div>
-      <div className="board-row">
-        {Cell()}
-        {Cell()}
-        {Cell()}
-        {Cell()}
-        {Cell()}
-      </div>
-      <div className="board-row">
-        {Cell()}
-        {Cell()}
-        {Cell()}
-        {Cell()}
-        {Cell()}
-      </div>
-      <div className="board-row">
-        {Cell()}
-        {Cell()}
-        {Cell()}
-        {Cell()}
-        {Cell()}
-      </div>
-      <div className="board-row">
-        {Cell()}
-        {Cell()}
-        {Cell()}
-        {Cell()}
-        {Cell()}
-      </div>
-    </div>
-  );
-}
+import Board from './Board'
 
 function App() {
   return (
     <div className="game">
       <div className="game-board">
-        <Board />
+        {Board(20, 20)}
       </div>
       <div className="game-info">
         <div>{/* status */}</div>
